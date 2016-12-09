@@ -38,6 +38,7 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      overflow-y: scroll;
     }
     *, *:before, *:after {
       -webkit-box-sizing: inherit;
@@ -66,6 +67,25 @@
       font-size: x-large;
     }
 
+    .qr_code {
+      margin: 0 auto;
+      width: 50%;
+    }
+    
+    .add_button {
+      background-color: blueviolet;
+      margin: 1em 0.9em 0 0;
+      height: 3em;
+      text-align: center;
+    }
+
+    #butAddContact {
+      font-size: x-large;
+      font-variant: small-caps;
+      color: white;
+      padding: 6px 0 1px 0;
+    }
+
   </style>
   
 </head>
@@ -84,7 +104,8 @@
       <div class="designation"><p>Experience Design Consultant</p></div>
       <div class="phone"><a href="tel:00971508786618">0508786618</a></div>
       <div class="email"><a href="mailto:experience@thisnameless.com?subject=Varun, I thought of something!">experience@thisnameless.com</a></div>
-      <div class="notes">Don't forget to contact him in case you need UX consultation, also if you need company to try out that new restaurant.</div>
+      <div class="notes">
+        <p>Don't forget to contact him in case you need UX consultation, also if you need company to try out that new restaurant.</p></div>
       <div class="qr_code">
         <img src="https://placekitten.com/120/120"/>
       </div>
