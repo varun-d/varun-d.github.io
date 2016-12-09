@@ -51,6 +51,10 @@
       margin-bottom: 0em;
     }
 
+    .cont_img img {
+      width: 98%;
+    }
+
     .designation p {
       margin-top: auto;
     }
@@ -69,7 +73,7 @@
 
     .qr_code {
       margin: 0 auto;
-      width: 50%;
+      width: 57%;
     }
     
     .add_button {
@@ -84,6 +88,8 @@
       font-variant: small-caps;
       color: white;
       padding: 6px 0 1px 0;
+      background: none;
+      border: none;
     }
 
   </style>
@@ -91,14 +97,14 @@
 </head>
 <body>
 
-  <header class="header">
+<!--   <header class="header">
     <h1>Hello</h1>
-    <a href="http://goo.gl/test"></a>
-  </header>
+    <a href=""></a>
+  </header> -->
 
   <main class="main">
       <div class="cont_img">
-        <img src="https://placekitten.com/350/190"/>
+        <img src="/team_1.jpg"/>
       </div>
       <h1>Varun Dhanwantri</h1>
       <div class="designation"><p>Experience Design Consultant</p></div>
@@ -107,7 +113,7 @@
       <div class="notes">
         <p>Don't forget to contact him in case you need UX consultation, also if you need company to try out that new restaurant.</p></div>
       <div class="qr_code">
-        <img src="https://placekitten.com/120/120"/>
+        <img src="/qr.png"/>
       </div>
       <div class="add_button">
         <button id="butAddContact">Add to my contacts</button>
@@ -116,7 +122,24 @@
 
   <!-- JS Scripts here in case -->
   <script type="text/javascript">
-    // Scripts here.
+    var myInit = { method: 'GET' };
+    btn = document.getElementById('butAddContact');
+    btn.addEventListener('click', function () {
+      console.log('Add to contact clicked.');
+      fetch('/Varun Dhanwantri.vcf', myInit).then(function(response){
+        if (response.status >= 200 && response.status < 300) {
+          console.log('Downloaded contact!');
+          return Promise.resolve(response);
+    } else {
+      var error = new Error(response.statusText || response.status);
+      error.response = response;
+      console.log(error);
+      return Promise.reject(error);
+    }
+      }).catch(function(event){
+        console.log('Error getting contact.', event);
+      });
+    });
   </script>
 
 </body>
