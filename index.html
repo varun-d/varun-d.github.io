@@ -81,15 +81,15 @@
       margin: 1em 0.9em 0 0;
       height: 3em;
       text-align: center;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
     }
 
     #butAddContact {
       font-size: x-large;
       font-variant: small-caps;
       color: white;
-      padding: 6px 0 1px 0;
-      background: none;
-      border: none;
+      text-decoration: none;
     }
 
   </style>
@@ -116,31 +116,9 @@
         <img src="/qr.png"/>
       </div>
       <div class="add_button">
-        <button id="butAddContact">Add to my contacts</button>
+        <a href="/Varun Dhanwantri.vcf" _target="blank" id="butAddContact">add to my contacts</a>
       </div>
   </main>
-
-  <!-- JS Scripts here in case -->
-  <script type="text/javascript">
-    var myInit = { method: 'GET' };
-    btn = document.getElementById('butAddContact');
-    btn.addEventListener('click', function () {
-      console.log('Add to contact clicked.');
-      fetch('/Varun Dhanwantri.vcf', myInit).then(function(response){
-        if (response.status >= 200 && response.status < 300) {
-          console.log('Downloaded contact!');
-          return Promise.resolve(response);
-    } else {
-      var error = new Error(response.statusText || response.status);
-      error.response = response;
-      console.log(error);
-      return Promise.reject(error);
-    }
-      }).catch(function(event){
-        console.log('Error getting contact.', event);
-      });
-    });
-  </script>
 
 </body>
 </html>
