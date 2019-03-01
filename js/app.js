@@ -25,15 +25,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// // Open tooltips on clicking of main button
-// // Test on live and then remove or keep
-// var main_btn = document.getElementById("btn_main");
-// main_btn.addEventListener('click', function(){
 
-//   var elems = document.querySelectorAll('.tooltipped');
-//   for(var i = 0; i<elems.length; i++) {
-//       var instance = M.Tooltip.getInstance(elems[i]);
-//       instance.open()
-//   }
+// Testing mobile paralax!
 
-// }, false)
+window.addEventListener('deviceorientation', function(eventData) {
+  // Retrieving the front/back tilting of the device and moves the
+  // background in the opposite way of the tilt
+
+  var yTilt = Math.round(( -eventData.beta + 90) * (40/180) - 40);
+
+  // Retrieve the side to side tilting of the device and move the
+  // background the opposite direction.
+
+  var xTilt = Math.round( -eventData.gamma * (20/180) - 20);
+
+  // Thi 'if' statement checks if the phone is upside down and corrects
+  // the value that is returned.
+  if (xTilt > 0) {
+    xTilt = -xTilt;
+  } else if (xTilt < -40) {
+    xTilt = -(xTilt + 80);
+  }
+
+  var backgroundPositionValue = yTilt + 'px ' + xtilt + "px";
+
+  document.body.style.backgroundPosition = backgroundPositionValue;
+}, false);

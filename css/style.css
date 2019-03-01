@@ -1,0 +1,11 @@
+body {
+  background-image: url("../img/bg.jpg");
+  background-color: #333333;
+  background-position: left;
+  background-repeat: round;
+}
+
+#header_logo {
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
