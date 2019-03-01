@@ -1,124 +1,80 @@
-<!--
- Copyright 2016 Nameless Experience Design Co.
- Varun Dhanwantri
--->
-
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="noindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varun Dhanwantri</title>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-  <!-- TODO: Manifest file for Contact Card -->
-  <!-- <link rel="manifest" href="/manifest.json"> -->
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <!-- Edit Name here -->
-  <meta name="apple-mobile-web-app-title" content="Varun Dhanwantri">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
-  <style type="text/css">
-    html {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-      font-family: 'Helvetica', 'Verdana', sans-serif;
-      font-weight: 400;
-      color: #444;
-      -webkit-font-smoothing: antialiased;
-      overflow: hidden;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-    }
-    *, *:before, *:after {
-      -webkit-box-sizing: inherit;
-      -moz-box-sizing: inherit;
-      box-sizing: inherit;
-    }
-
-    .main h1 {
-      margin-top: 0.4em;
-      margin-bottom: 0em;
-    }
-
-    .cont_img img {
-      width: 98%;
-    }
-
-    .designation p {
-      margin-top: auto;
-    }
-
-    .phone a {
-      text-decoration: none;
-      color: #444;
-      font-size: xx-large;
-    }
-
-    .email a {
-      text-decoration: none;
-      color: #444;
-      font-size: x-large;
-    }
-
-    .qr_code {
-      margin: 0 auto;
-      width: 57%;
-    }
-    
-    .add_button {
-      background-color: blueviolet;
-      margin: 1em 0.9em 0 0;
-      height: 3em;
-      text-align: center;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-    }
-
-    #butAddContact {
-      font-size: x-large;
-      font-variant: small-caps;
-      color: white;
-      text-decoration: none;
-    }
-
-  </style>
-  
-</head>
 <body>
+<div class="container">
+    <nav> <!-- Todo Fix this class, and make it normal with custom css to add padding up/down. -->
+    <div class="nav-wrapper center white z-depth-0">
+    	<img src="img/acn_logo_black.png" class="responsive-img" alt="Accenture Interactive Logo" width="50%">
+    </div>
+    </nav>
 
-<!--   <header class="header">
-    <h1>Hello</h1>
-    <a href=""></a>
-  </header> -->
+  	 <div class="card">
+  	 	<div class="card-content">
+    	<img src="img/profile_icon.jpg" class="responsive-img circle" alt="Profile Picture" width="80">
+    	<span class="card-title">Varun Dhanwantri</span>
+    	<a class="btn-floating halfway-fab waves-effect red"><i class="material-icons">add</i></a>
+    	<p>Sr. Product Consultant</p>
+    	<p>Accenture Interactive - Dubai, U.A.E</p>
+    	</div>
+  	</div>
 
-  <main class="main">
-      <div class="cont_img">
-        <img src="/team_1.jpg"/>
-      </div>
-      <h1>Varun Dhanwantri</h1>
-      <div class="designation"><p>Experience Design Consultant</p></div>
-      <div class="phone"><a href="tel:00971508786618">0508786618</a></div>
-      <div class="email"><a href="mailto:experience@thisnameless.com?subject=Varun, I thought of something!">experience@thisnameless.com</a></div>
-      <div class="notes">
-        <p>Don't forget to contact him in case you need UX consultation, also if you need company to try out that new restaurant.</p></div>
-      <div class="qr_code">
-        <img src="/qr.png"/>
-      </div>
-      <div class="add_button">
-        <a href="/Varun Dhanwantri.vcf" _target="blank" id="butAddContact">add to my contacts</a>
-      </div>
-  </main>
+  	<!-- HAdd  <div class="col s12 m7"> ? -->
 
-</body>
-</html>
+      <div class="card">
+        <div class="card-image">
+          <img src="img/map.png">
+          <!-- <span class="card-title black-text">Accenture Dubai</span> -->
+        </div>
+        <div class="card-content">
+          <p>16th Floor Arenco Tower, Dubai Media City</p>
+          <p>Dubai - U.A.E.</p>
+        </div>
+        <div class="card-action">
+          <a href="https://www.google.com/maps/place/Arenco+Tower+-+Exit+33+-+Dubai/@25.0914606,55.1574269,17z/data=!4m8!1m2!3m1!2sAccenture!3m4!1s0x3e5f6b5d6bb8ad01:0x3150a07b113a0e5a!8m2!3d25.0916827!4d55.1584516">Open in Maps</a>
+        </div>
+      </div>
+
+
+
+
+  	<!-- Main Action Button: Todo: Add proper buttons and tooltips, action links like phone + email + VCF link. -->
+  	<div class="fixed-action-btn">
+	  <a class="btn-floating btn-large waves-effect waves-light amber lighten-2" id="btn_main">
+	    <i class="large material-icons">account_circle</i>
+	  </a>
+	  <ul>
+	    <li><a class="btn-floating red tooltipped" data-tooltip="Save Contact" id="save_tt"><i class="material-icons">person_add</i></a></li>
+	    <li><a class="btn-floating yellow darken-1" data-tooltip="Email Me" ><i class="material-icons">email</i></a></li>
+	    <li><a class="btn-floating green" href="tel:+971508113791" data-tooltip="Call Me" ><i class="material-icons">call</i></a></li>
+	    <li><a class="btn-floating blue" href="#modal1"  data-tooltip="View QR" ><i class="material-icons">center_focus_strong</i></a></li>
+	  </ul>
+	</div>
+
+	<!-- QR Modal -->
+
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Scan Me</h4>
+			<img src="img/qr.png" class="responsive-img">
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green">Close</a>
+		</div>
+	</div>
+
+</div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+    </body>
+  </html>
