@@ -1,23 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.fixed-action-btn');
-  var instances = M.FloatingActionButton.init(elems, {
+
+  // Get all grouped button elemnets
+  var elems_float_btns = document.querySelectorAll('.fixed-action-btn');
+  
+  // Get all tooltiped elements
+  var elems_tt = document.querySelectorAll('.tooltipped');
+  
+  // Get all modals
+  var elems_modals = document.querySelectorAll('.modal');
+  
+  // Init all of the above.
+  var float_btns_instances = M.FloatingActionButton.init(elems_float_btns, {
     direction: 'top',
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.tooltipped');
-  var instances = M.Tooltip.init(elems, {
+  var tt_instances = M.Tooltip.init(elems_tt, {
     position: 'left',
-    enterDelay: 420
+    // enterDelay: 420
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, {
+  var modal_instances = M.Modal.init(elems_modals, {
     preventScrolling: true
   });
+
 });
 
 // // Open tooltips on clicking of main button

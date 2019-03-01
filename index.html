@@ -12,23 +12,22 @@
 
 <body>
 <div class="container">
-    <nav> <!-- Todo Fix this class, and make it normal with custom css to add padding up/down. -->
-    <div class="nav-wrapper center white z-depth-0">
+    <div class="center">
     	<img src="img/acn_logo_black.png" class="responsive-img" alt="Accenture Interactive Logo" width="50%">
     </div>
-    </nav>
 
   	 <div class="card">
   	 	<div class="card-content">
-    	<img src="img/profile_icon.jpg" class="responsive-img circle" alt="Profile Picture" width="80">
-    	<span class="card-title">Varun Dhanwantri</span>
-    	<a class="btn-floating halfway-fab waves-effect red"><i class="material-icons">add</i></a>
+        <div class="row valign-wrapper"> 
+          <div class="col s3"><img src="img/profile_icon.jpg" class="responsive-img circle" alt="Profile Picture" width="80"></div>
+         <div class="col s9"><span class="card-title">Varun Dhanwantri</span></div>
+        </div>
     	<p>Sr. Product Consultant</p>
     	<p>Accenture Interactive - Dubai, U.A.E</p>
     	</div>
   	</div>
 
-  	<!-- HAdd  <div class="col s12 m7"> ? -->
+  	<!-- Add  <div class="col s12 m7"> ? -->
 
       <div class="card">
         <div class="card-image">
@@ -40,7 +39,7 @@
           <p>Dubai - U.A.E.</p>
         </div>
         <div class="card-action">
-          <a href="https://www.google.com/maps/place/Arenco+Tower+-+Exit+33+-+Dubai/@25.0914606,55.1574269,17z/data=!4m8!1m2!3m1!2sAccenture!3m4!1s0x3e5f6b5d6bb8ad01:0x3150a07b113a0e5a!8m2!3d25.0916827!4d55.1584516">Open in Maps</a>
+          <a href="https://www.google.com/maps/place/Arenco+Tower+-+Exit+33+-+Dubai/@25.0914606,55.1574269,17z/data=!4m8!1m2!3m1!2sAccenture!3m4!1s0x3e5f6b5d6bb8ad01:0x3150a07b113a0e5a!8m2!3d25.0916827!4d55.1584516">Visit our studio</a>
         </div>
       </div>
 
@@ -53,10 +52,10 @@
 	    <i class="large material-icons">account_circle</i>
 	  </a>
 	  <ul>
-	    <li><a class="btn-floating red tooltipped" data-tooltip="Save Contact" id="save_tt"><i class="material-icons">person_add</i></a></li>
-	    <li><a class="btn-floating yellow darken-1" data-tooltip="Email Me" ><i class="material-icons">email</i></a></li>
-	    <li><a class="btn-floating green" href="tel:+971508113791" data-tooltip="Call Me" ><i class="material-icons">call</i></a></li>
-	    <li><a class="btn-floating blue" href="#modal1"  data-tooltip="View QR" ><i class="material-icons">center_focus_strong</i></a></li>
+	    <li><a class="btn-floating red tooltipped" data-tooltip="Save Contact"><i class="material-icons">person_add</i></a></li>
+	    <li><a class="btn-floating yellow darken-1 tooltipped" href="mailto:varun.dhanwantri@accenture.com" data-tooltip="Email Me" ><i class="material-icons">email</i></a></li>
+	    <li><a class="btn-floating green tooltipped" href="tel:+971508113791" data-tooltip="Call Me" ><i class="material-icons">call</i></a></li>
+	    <li><a class="btn-floating blue tooltipped modal-trigger" href="#modal1" data-tooltip="View QR" id="modal_a" ><i class="material-icons">center_focus_strong</i></a></li>
 	  </ul>
 	</div>
 
@@ -68,7 +67,7 @@
 			<img src="img/qr.png" class="responsive-img">
 		</div>
 		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green">Close</a>
+			<a href="#!" class="modal-action modal-close waves-effect waves-green align-center">Close</a>
 		</div>
 	</div>
 
