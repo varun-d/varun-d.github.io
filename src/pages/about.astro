@@ -1,5 +1,18 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+  firstname: "Varun",
+	country: "Canada",
+	occupation: "Designer & Technologist",
+	hobbies: ["photography", "music production", "travel"]
+};
+
+const skills = ["Design: Figma", "Front End: React", "Backend: Python", "Product Strategy"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,13 +21,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>My Engineering Journey</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
 		<a href="/about">About</a>
 		<a href="/blog">Blog</a>
-		<h1>About Vee</h1>
-		<p>Testing astro web framework. All pages are static.</p>
+		<h1>About {identity.firstname}</h1>
+		<p>I live in {identity.country} and I work as a {identity.occupation}</p>
+		{happy && <p>I am happy to be learnings astro. Created with conditional</p>}
 	</body>
 </html>
