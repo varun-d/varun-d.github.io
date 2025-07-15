@@ -1,4 +1,8 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const gColor = "red";
 const pageTitle = "About Me";
 
 const identity = {
@@ -22,13 +26,17 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+<style define:vars={{gColor}}>
+	h1 {
+		color: var(--gColor);
+		font-size: 4rem;
+	}
+</style>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/blog">Blog</a>
-		<h1>About {identity.firstname}</h1>
+		<Navigation/>
 		<p>I live in {identity.country} and I work as a {identity.occupation}</p>
 		{happy && <p>I am happy to be learnings astro. Created with conditional</p>}
+		<Footer/>
 	</body>
 </html>
