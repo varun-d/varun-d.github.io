@@ -2,7 +2,7 @@ import type { ThemeConfig } from './types'
 
 export const themeConfig: ThemeConfig = {
   site: {
-    website: 'varun-d.github.io', // Site domain
+    website: 'https://varun-d.github.io/', // Site domain
     title: 'Varun Dhanwantri', // Site title
     author: 'Varun D', // Author name
     description: 'My engineering journey with Astro', // Site description
