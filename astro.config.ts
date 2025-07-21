@@ -14,10 +14,14 @@ import remarkTOC from './src/plugins/remark-toc.mjs'
 import { themeConfig } from './src/config'
 import { imageConfig } from './src/utils/image-config'
 import path from 'path'
-import netlify from '@astrojs/netlify'
+// import netlify from '@astrojs/netlify'
+import node from '@astrojs/node'
 
 export default defineConfig({
-  adapter: netlify(), // Set adapter for deployment
+  // adapter: netlify(), // Set adapter for deployment
+  adapter: node({
+      mode: 'standalone'
+  }),
   site: themeConfig.site.website,
   image: {
     service: {
