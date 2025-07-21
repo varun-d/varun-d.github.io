@@ -40,7 +40,6 @@
 
 /* Italic text */
 .prose em {
-  font-family: var(--serif);
   font-style: italic;
   letter-spacing: 0;
 }

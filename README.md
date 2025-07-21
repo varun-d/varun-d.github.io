@@ -3,9 +3,9 @@
 Built with [Astro](https://astro.build)
 
 ## TODO:
-1. Check how images are being served in Astro. Keep in Public with dist folder and images link to them
-2. Check how new posts are being created, after deleting old posts
-3. Image services, check how images are being seved/served. Not needed, but will be great to know.
+[] Check About Me content
+[] Replace all content with 1 new post, publish.
+[] Check how images is being used
 
 ## Commands
 

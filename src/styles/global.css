@@ -7,7 +7,7 @@
 
   /* Typography */
   --sans:
-    Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --serif: Besley, Baskerville, Georgia, Cambria, 'Times New Roman', Times, serif;
   --mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -24,8 +24,8 @@
   --spacing-m: -0.02em;
 
   /* Light Mode Colors (Default) */
-  --bg: #ffffff;
-  --text-primary: rgba(0, 0, 0, 0.85);
+  --bg: rgba(250, 250, 255, 0.74);
+  --text-primary: rgba(28, 23, 27, 0.85); 
   --text-secondary: rgba(0, 0, 0, 0.4);
   --text-tertiary: rgba(0, 0, 0, 0.24);
   --border: rgba(0, 0, 0, 0.1);
@@ -74,9 +74,9 @@ html.light {
 
 /* Dark Mode (Explicit) */
 html.dark {
-  --bg: #1c1c1c;
-  --text-primary: rgba(255, 255, 255, 0.9);
-  --text-secondary: rgba(255, 255, 255, 0.4);
+  --bg: rgba(28, 23, 27, 1);
+  --text-primary: rgba(250, 250, 255, 0.74);
+  --text-secondary: rgba(250, 250, 255, 0.4);
   --text-tertiary: rgba(255, 255, 255, 0.24);
   --border: rgba(255, 255, 255, 0.1);
   --selection: rgba(255, 255, 255, 0.08);

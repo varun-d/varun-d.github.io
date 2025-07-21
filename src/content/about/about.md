@@ -1,14 +1,10 @@
 ---
 title: 'About'
 ---
+My journey began with an appreciation for words. <em>Stories</em> captivated my imagination, weaving ideas, thoughts and emotions into comqpelling narratives. My curiosity asks "...and then what happened!?".
 
-<!--
-This content will be displayed at the top of the index page.
-You can leave this empty if you don’t want to show any content.
--->
+Though <em>stories</em> don't exist in a vacuum. Language conveys ideas. Ideas take form through <em>design</em>. Awakened through visuals. Affording us an experience with shape, space, color and light.
 
-I am in love with code. With a deliberately minimal design, this layout ensures your content takes center stage. It's built for flexibility, offering customization options that honor its clean and elegant aesthetic.
+<em>Design</em> gives us the blueprint. The art of engineering takes over. Solving problems, delighting us on the way. When <em>good enoguh</em> is enough. it is sustainable, ethical, timeless.
 
-Effortlessly share your thoughts in _a calm & dustless space._
-
-Check posts for details and view source on [GitHub](https://github.com/the3ash/astro-chiri).
+Story + Design + Technology
