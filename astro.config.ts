@@ -17,7 +17,6 @@ import path from 'path'
 import netlify from '@astrojs/netlify'
 
 export default defineConfig({
-  adapter: netlify(), // Set adapter for deployment
   site: themeConfig.site.website,
   image: {
     service: {

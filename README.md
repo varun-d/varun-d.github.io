@@ -3,8 +3,9 @@
 Built with [Astro](https://astro.build)
 
 ## TODO:
-1. Modify Readmy
-2. Modify main primary content
+1. Check how images are being served in Astro. Keep in Public with dist folder and images link to them
+2. Check how new posts are being created, after deleting old posts
+3. Image services, check how images are being seved/served. Not needed, but will be great to know.
 
 ## Commands
 
