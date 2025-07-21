@@ -1,29 +1,30 @@
-# Next Steps: GitHub Pages Deployment with Node Adapter
+# Next Steps: GitHub Pages Static Deployment
 
-Here's how to use the `@astrojs/node` adapter with GitHub Actions for deployment to GitHub Pages:
+Since GitHub Pages only serves static files, here's how to configure Astro for pure static generation:
 
-## Step 1: Install Node Adapter
+## Step 1: Remove Server-Side Rendering
 
-```bash
-pnpm add @astrojs/node
-```
-
-## Step 2: Update Astro Config
-
-Replace the Netlify adapter with Node adapter in `astro.config.ts`:
-
+### Remove the Node adapter from `astro.config.ts`:
 ```typescript
-import node from '@astrojs/node'
-
 export default defineConfig({
-  adapter: node({
-    mode: 'standalone'
-  }),
-  // ... rest of your config
+  // Remove this line:
+  // adapter: node({ mode: 'standalone' }),
+  
+  site: themeConfig.site.website,
+  // ... rest of config stays the same
 })
 ```
 
-## Step 3: Create GitHub Actions Workflow
+### Delete the API proxy endpoint:
+```bash
+rm src/pages/api/proxy.ts
+```
+
+## Step 2: Verify Static Generation
+
+The OG image generation should still work because `astro-og-canvas` with `getStaticPaths` will generate all images at build time during the build process.
+
+## Step 3: Use GitHub's Official Astro Action
 
 Create `.github/workflows/deploy.yml`:
 
@@ -89,19 +90,22 @@ jobs:
 2. Set **Source** to "GitHub Actions"
 3. Save the settings
 
-## Benefits of This Approach:
+## What This Approach Provides:
 
-- **Keeps all your features**: API routes, dynamic OG images, Sharp image processing
-- **Server-side rendering**: Your proxy endpoint and dynamic routes work
-- **Build-time optimization**: Images processed during CI build
-- **GitHub hosting**: Still uses GitHub Pages for hosting
+- **Static site generation**: Pure static files for GitHub Pages
+- **Build-time optimization**: Sharp processes images during CI build
+- **OG image generation**: Dynamic OG images generated statically at build time
+- **All other features**: Your image optimization, lazy loading, and viewer still work
+- **GitHub hosting**: Free hosting on GitHub Pages
+
+## What You Lose:
+
+- **API proxy endpoint**: The `/api/proxy` route won't work (but this can be replaced with client-side CORS proxies if needed)
 
 ## How It Works:
 
 1. GitHub Actions runs the build with Node.js environment
 2. Sharp processes images during build
-3. Node adapter creates a standalone server build
+3. OG images are pre-generated for all posts
 4. Static files are deployed to GitHub Pages
-5. Your server features work via the Node runtime
-
-The key difference from pure static is that this creates a Node.js server that GitHub Actions can run during the build process, allowing all your server-rendered features to work while still deploying static files to GitHub Pages.
+5. All your image features work via pre-processed assets

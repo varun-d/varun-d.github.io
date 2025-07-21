@@ -19,9 +19,7 @@ import node from '@astrojs/node'
 
 export default defineConfig({
   // adapter: netlify(), // Set adapter for deployment
-  adapter: node({
-      mode: 'standalone'
-  }),
+  output: 'static',
   site: themeConfig.site.website,
   image: {
     service: {
