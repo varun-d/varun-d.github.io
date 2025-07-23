@@ -1,66 +1,38 @@
 ---
-title: 'Embedded Content'
-pubDate: '2025-06-06'
+title: 'On Creating Music'
+pubDate: '2024-04-04'
 ---
 
-Use these directives to embed media:
+I've played the pinao on and off since I was 10. Last year in 2024, I decided to publish my old albums and seriously create more music.
 
-```
-::link{url="https://xxxxx"}
+My setup is Ableton Live, Arturia Minifreak synth, Arturia Minilab 3 MIDI controller
 
-::spotify{url="https://open.spotify.com/type/xxxxxx"}
+::spotify{url="https://open.spotify.com/artist/5RUk21bmt5XRFjvgtYlmld"}
 
-::youtube{url="https://www.youtube.com/watch?v=xxxxxx"}
+---
 
-::bilibili{url="https://www.bilibili.com/video/xxxxxx"}
+## Latest
 
-::github{repo="username/repo"}
+::spotify{url="https://open.spotify.com/track/1sl22EJ4hQlX8heT72Z6zw?si=8ca29ad6f4ce4e37"}
 
-::x{url="https://x.com/username/status/xxxxxx"}
-```
+## Singles
 
-```
-🟡
+::spotify{url="https://open.spotify.com/track/6ZVft7aRMZwOrGeSOUYdtb?si=68460afc5c474c99"}
+::spotify{url="https://open.spotify.com/track/5kXPYyZXDsYFu71KkfcJNs?si=4d0398ea25ea4433"}
+::spotify{url="https://open.spotify.com/track/3dUIXhqaJ3W23kkSWOGqqk?si=db608641bbae44fb"}
 
-When embedded content is still loading,
-the table of contents positioning may be inaccurate.
-```
+## Album: Walk by the lake
 
-## Link Card
+> Composed in 2015
 
-::link{url="https://pitchfork.com/reviews/albums/ichiko-aoba-luminescent-creatures/"}
+::spotify{url="https://open.spotify.com/album/2hAFm7FCM3eHpkP5HUK96r?si=jfE_E1LYR3aKFoY_Ozq1zw"}
 
-```
-🟡
+## Album: City
 
-If you don’t need Link Card, you can skip adapter setup:
+> Composed in 2010
 
-- Run「pnpm remove @astrojs/netlify」
-- Delete the following content:
-  - src/component/ui/LinkCard.astro
-  - src/plugins/remark-embedded-media.mjs (Lines 8 - 32)
-  - src/pages/api/proxy.ts
-  - astro.config.ts (Lines 17 & 20)
-```
+::spotify{url="https://open.spotify.com/album/0mCpaaW4MUzUL3KnC8iGtv?si=PltcQZAnSdeFWk78HHFzMg"}
 
-## Spotify
+## Live w/ Arturia MiniFreak
 
-::spotify{url="https://open.spotify.com/track/41Y0ch6R3jzpJOZv6nhf9Z?si=6c82dbed65ab4853"}
-
-::spotify{url="https://open.spotify.com/album/1kBPEN3NIVwjdmIjjNk9vB?si=Lz29MvjwRnKX9y3dhxlbaQ"}
-
-## YouTube
-
-::youtube{url="https://www.youtube.com/embed/GlhV-OKHecI?si=KdB4rRPLAMEK-ozf"}
-
-## BiliBili
-
-::bilibili{url="https://www.bilibili.com/video/BV1Vm421W7pX/?vd_source=c0bc2746a6d2b23de50d26376498b2ff"}
-
-## GitHub
-
-::github{repo="the3ash/astro-chiri"}
-
-## X Post
-
-::x{url="https://x.com/DAVID_LYNCH/status/1174367510893752321"}
+::youtube{url="https://youtu.be/SsGs8swMEAc?si=f-WW_8edMGxzNMVy"}
