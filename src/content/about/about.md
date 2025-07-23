@@ -12,4 +12,4 @@ Now I've understood the <em>story</em>, and given it form through <em>design</em
 
 <em>Technology</em> and engineering brings it to life. When done right it delights us.
 
-Story + Design + Technology
+Story + Design + Technology; is what I love.
