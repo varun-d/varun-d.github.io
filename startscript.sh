@@ -14,7 +14,7 @@ if [ $? != 0 ]; then
     echo "Tmux session does not exist. Creating new as per instructions"
     
     # Change this to server of choice or keep it as "lsa; exec /bin/zsh"
-    tmux new-session -d -s "$SESSION" -n server "pnpm run dev; exec /bin/zsh"
+    tmux new-session -d -s "$SESSION" -n server "bun run dev; exec /bin/zsh"
     tmux new-window -t "$SESSION:" -n nvim "nvim"
     tmux new-window -t "$SESSION:" -n claude "$HOME/.claude/local/claude"
     tmux new-window -t "$SESSION:" -n term "exec /bin/zsh"
