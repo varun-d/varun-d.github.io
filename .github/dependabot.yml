@@ -1,7 +1,7 @@
 version: 2
 updates:
-  # Enable npm (pnpm) dependency updates
-  - package-ecosystem: 'npm'
+  # Enable Bun dependency updates
+  - package-ecosystem: 'bun'
     directory: '/'
     schedule:
       # Check for updates every Monday at 09:00 (Asia/Shanghai)

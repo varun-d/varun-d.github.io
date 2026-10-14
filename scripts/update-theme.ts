@@ -1,8 +1,8 @@
-#!/usr/bin/env tsx
+#!/usr/bin/env bun
 
 /**
  * Update theme from upstream repository
- * Usage: pnpm update-theme
+ * Usage: bun run update-theme
  */
 
 import { execSync } from 'node:child_process'

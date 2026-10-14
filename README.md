@@ -9,8 +9,11 @@ Built with [Astro](https://astro.build)
 
 ## Commands
 
-- `pnpm new <title>` - Create a new post (use `_title` for drafts)
-- `pnpm update-theme` - Update the theme to the latest version
+- `bun install` - Install dependencies
+- `bun run dev` - Start the dev server
+- `bun run build` - Build the static site to `dist/`
+- `bun run new <title>` - Create a new post (use `_title` for drafts)
+- `bun run update-theme` - Update the theme to the latest version
 
 
 ## Credits
@@ -19,8 +22,7 @@ Built with [Astro](https://astro.build)
 
 Edit `src/config.ts` and `src/content/about/about.md` to your liking.
 
-Use `pnpm new <title>` to create new posts, or add your posts to `src/content/posts`.
+Use `bun run new <title>` to create new posts, or add your posts to `src/content/posts`.
 
 Deploy to Netlify, Vercel, or other platforms, refer to [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) for more details.
-   - **Static (e.g. GitHub Pages)**: `pnpm add @astrojs/static` and add `adapter: static()` in `astro.config.ts`.
 
